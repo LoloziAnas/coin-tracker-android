@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Crypto Tracker</string>
+    <string name="active_label">active</string>
+    <string name="inactive_label">inactive</string>
 </resources>

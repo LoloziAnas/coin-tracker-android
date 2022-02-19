@@ -1,8 +1,12 @@
 package com.lolozianas.cryptotracker
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
+/**
+ * [MainActivity] sets the content view activity_main, a fragment container that contains
+ * OverviewFragment.
+ * */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
