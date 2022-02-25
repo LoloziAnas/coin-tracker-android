@@ -22,6 +22,7 @@ class OverviewAdapter : ListAdapter<Coin, OverviewAdapter.OverviewViewHolder>(Di
         fun bind(coin: Coin) {
             // Bind the coin object
             binding.coin = coin
+            // Assign if the coin is still active
             binding.isActive = coin.isActive
 
             // This is important, because it forces the data binding to execute immediately,
