@@ -41,7 +41,7 @@ class OverviewFragment : Fragment() {
             viewModel = overviewViewModel
 
             // Sets the adapter of Overview RecyclerView
-            //recyclerViewOverview.adapter = OverviewAdapter()
+            recyclerViewOverview.adapter = OverviewAdapter()
 
         }
     }
