@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Crypto Tracker</string>
-    <string name="active_label">active</string>
-    <string name="inactive_label">inactive</string>
+    <string name="active_label">Active</string>
+    <string name="inactive_label">Inactive</string>
     <string name="coins_fragment_label">Coins</string>
+    <string name="coins_symbol">(%s)</string>
 </resources>
