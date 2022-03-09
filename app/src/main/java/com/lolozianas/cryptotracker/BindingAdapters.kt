@@ -5,15 +5,15 @@ import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.lolozianas.cryptotracker.network.Coin
-import com.lolozianas.cryptotracker.ui.overview.APIStatus
-import com.lolozianas.cryptotracker.ui.overview.OverviewAdapter
+import com.lolozianas.cryptotracker.ui.APIStatus
+import com.lolozianas.cryptotracker.ui.CoinListAdapter
 
 /**
  * Updates the data shown in the [RecyclerView].
  */
 @BindingAdapter("listData")
 fun bindRecyclerView(recyclerView: RecyclerView, data: List<Coin>?) {
-    val adapter = recyclerView.adapter as OverviewAdapter
+    val adapter = recyclerView.adapter as CoinListAdapter
     adapter.submitList(data)
 }
 
@@ -23,6 +23,7 @@ fun bindRecyclerView(recyclerView: RecyclerView, data: List<Coin>?) {
  * displays a broken image to reflect the connection error.  When the request is finished, it
  * hides the image view.
  */
+
 @BindingAdapter("apiStatus")
 fun bindStatus(statusImageView: ImageView, status: APIStatus?) {
     when (status) {
@@ -34,7 +35,8 @@ fun bindStatus(statusImageView: ImageView, status: APIStatus?) {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.ic_connection_error)
         }
-        APIStatus.SUCCESS -> {
+        // APIStatus.DONE
+        else -> {
             statusImageView.visibility = View.GONE
         }
     }

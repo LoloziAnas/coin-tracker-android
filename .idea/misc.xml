@@ -7,8 +7,12 @@
         <entry key="..\:/Users/LZI/AndroidStudioProjects/CryptoTracker/app/src/main/res/drawable/ic_connection_error.xml" value="0.2203125" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/CryptoTracker/app/src/main/res/drawable/loading_img.xml" value="0.2203125" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/CryptoTracker/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/LZI/AndroidStudioProjects/CryptoTracker/app/src/main/res/layout/coin_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/LZI/AndroidStudioProjects/CryptoTracker/app/src/main/res/layout/fragment_coin.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/LZI/AndroidStudioProjects/CryptoTracker/app/src/main/res/layout/fragment_coin_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/CryptoTracker/app/src/main/res/layout/grid_view_item.xml" value="0.33" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/CryptoTracker/app/src/main/res/layout/linear_view_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/LZI/AndroidStudioProjects/CryptoTracker/app/src/main/res/layout/list_view_coin.xml" value="0.25" />
         <entry key="..\:/Users/LZI/AndroidStudioProjects/CryptoTracker/app/src/main/res/layout/overview_fragment.xml" value="0.33" />
       </map>
     </option>
