@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorSurface">@color/primaryLightColor</item>
+        <item name="colorOnSurface">@color/primaryDarkColor</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">@dimen/_8sdp</item>
+    </style>
+    <style name="Widget.App.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Card</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Card" parent="">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorSurface">@color/primaryLightColor</item>
+        <item name="colorOnSurface">@color/primaryDarkColor</item>
+    </style>
+</resources>
