@@ -4,22 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewModel"
-            type="com.lolozianas.cryptotracker.ui.CoinViewModel" />
+            type="com.lolozianas.cryptotracker.ui.coin.CoinViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.CoinFragment">
+        tools:context=".ui.coin.CoinFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_coins"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:padding="@dimen/_8sdp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,8 +28,8 @@
 
         <ImageView
             android:id="@+id/status_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
             android:contentDescription="@string/app_name"
             app:apiStatus="@{viewModel.status}"
             app:layout_constraintBottom_toBottomOf="parent"

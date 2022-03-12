@@ -2,8 +2,8 @@ package com.lolozianas.cryptotracker.network
 
 import com.squareup.moshi.Json
 
-/** This data class defines a Coin which includes several properties
- *
+/**
+ * This data class defines a Coin which includes several properties
  * */
 
 data class Coin(

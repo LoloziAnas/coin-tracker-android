@@ -1,4 +1,4 @@
-package com.lolozianas.cryptotracker.ui
+package com.lolozianas.cryptotracker.ui.coin
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,12 +9,15 @@ import com.lolozianas.cryptotracker.databinding.ListViewCoinBinding
 import com.lolozianas.cryptotracker.network.Coin
 
 
-class CoinListAdapter : ListAdapter<Coin, CoinListAdapter.CoinViewHolder>(CoinDiffCallback) {
+class CoinListAdapter(private val clickListener: CoinListener) :
+    ListAdapter<Coin, CoinListAdapter.CoinViewHolder>(CoinDiffCallback) {
 
     inner class CoinViewHolder(private val binding: ListViewCoinBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bindCoin(coin: Coin) {
+        fun bindCoin(coin: Coin, clickListener: CoinListener) {
             binding.coin = coin
+            binding.clickListener = clickListener
+            binding.executePendingBindings()
         }
     }
 
@@ -24,7 +27,7 @@ class CoinListAdapter : ListAdapter<Coin, CoinListAdapter.CoinViewHolder>(CoinDi
 
     override fun onBindViewHolder(holder: CoinViewHolder, position: Int) {
         val coin = getItem(position)
-        holder.bindCoin(coin)
+        holder.bindCoin(coin, clickListener)
     }
 
     companion object CoinDiffCallback : DiffUtil.ItemCallback<Coin>() {
@@ -37,4 +40,8 @@ class CoinListAdapter : ListAdapter<Coin, CoinListAdapter.CoinViewHolder>(CoinDi
         }
 
     }
+}
+
+class CoinListener(val clickListener: (coin: Coin) -> Unit) {
+    fun onClick(coin: Coin) = clickListener(coin)
 }

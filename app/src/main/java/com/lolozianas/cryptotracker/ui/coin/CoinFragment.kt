@@ -1,11 +1,14 @@
-package com.lolozianas.cryptotracker.ui
+package com.lolozianas.cryptotracker.ui.coin
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import com.lolozianas.cryptotracker.R
 import com.lolozianas.cryptotracker.databinding.CoinFragmentBinding
 
 class CoinFragment : Fragment() {
@@ -39,7 +42,10 @@ class CoinFragment : Fragment() {
             viewModel = coinViewModel
 
             // Sets the adapter of Overview RecyclerView
-            recyclerViewCoins.adapter = CoinListAdapter()
+            recyclerViewCoins.adapter = CoinListAdapter(CoinListener { coin ->
+                val bundle = bundleOf("coinId" to coin.id)
+                findNavController().navigate(R.id.action_coinFragment_to_coinDetailFragment, bundle)
+            })
 
         }
     }

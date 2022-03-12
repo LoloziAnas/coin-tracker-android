@@ -8,53 +8,74 @@
         <variable
             name="coin"
             type="com.lolozianas.cryptotracker.network.Coin" />
+
+        <variable
+            name="clickListener"
+            type="com.lolozianas.cryptotracker.ui.coin.CoinListener" />
     </data>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:cardElevation="@dimen/_5sdp"
+        android:elevation="@dimen/_2sdp"
+        android:focusable="true">
 
-        <TextView
-            android:id="@+id/text_view_coin"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="@{coin.name}"
-            android:minWidth="150dp"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/text_view_symbol"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="BitCoin" />
+            android:layout_margin="@dimen/_5sdp"
+            android:onClick="@{()->clickListener.onClick(coin)}">
 
-        <TextView
-            android:id="@+id/text_view_symbol"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:minWidth="15dp"
-            android:text="@{coin.symbol}"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/text_view_coin"
-            tools:text="(BTC)" />
+            <TextView
+                android:id="@+id/text_view_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:text="@{coin.name}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/text_view_symbol"
+                app:layout_constraintRight_toLeftOf="@id/text_view_active"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="BitCoin" />
+
+            <TextView
+                android:id="@+id/text_view_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/coins_symbol(coin.symbol)}"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/text_view_coin"
+                app:layout_constraintTop_toBottomOf="@id/text_view_coin"
+                tools:text="(BTC)" />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="@{coin.isActive? @string/active_label:@string/inactive_label}"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-            android:textColor="@color/secondaryLightColor"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/text_view_symbol"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Active" />
+            <TextView
+                android:id="@+id/text_view_active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:text="@{coin.isActive? @string/active_label:@string/inactive_label}"
+                android:textColor="@color/secondaryLightColor"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Active" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/_250sdp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
 </layout>

@@ -5,8 +5,8 @@ import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.lolozianas.cryptotracker.network.Coin
-import com.lolozianas.cryptotracker.ui.APIStatus
-import com.lolozianas.cryptotracker.ui.CoinListAdapter
+import com.lolozianas.cryptotracker.ui.coin.APIStatus
+import com.lolozianas.cryptotracker.ui.coin.CoinListAdapter
 
 /**
  * Updates the data shown in the [RecyclerView].

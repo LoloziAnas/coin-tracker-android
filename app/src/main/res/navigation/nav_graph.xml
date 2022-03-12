@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/coinFragment">
 
     <fragment
         android:id="@+id/coinFragment"
-        android:name="com.lolozianas.cryptotracker.ui.CoinFragment"
-        android:label="@string/coins_fragment_label" />
+        android:name="com.lolozianas.cryptotracker.ui.coin.CoinFragment"
+        android:label="@string/coins_fragment_label" >
+        <action
+            android:id="@+id/action_coinFragment_to_coinDetailFragment"
+            app:destination="@id/coinDetailFragment" />
+        <argument
+            android:name="coinId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/coinDetailFragment"
+        android:name="com.lolozianas.cryptotracker.ui.coinDetail.CoinDetailFragment"
+        android:label="@string/coins_detail_fragment_label"
+        tools:layout="@layout/coin_detail_fragment" />
 </navigation>

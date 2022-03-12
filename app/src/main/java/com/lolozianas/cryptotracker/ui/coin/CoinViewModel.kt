@@ -1,4 +1,4 @@
-package com.lolozianas.cryptotracker.ui
+package com.lolozianas.cryptotracker.ui.coin
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -25,8 +25,8 @@ class CoinViewModel : ViewModel() {
         viewModelScope.launch {
             _status.value = APIStatus.LOADING
             try {
-                _status.value = APIStatus.DONE
                 _coins.value = CoinApi.retrofitService.getCoins()
+                _status.value = APIStatus.DONE
             } catch (e: Exception) {
                 _status.value = APIStatus.ERROR
                 _coins.value = listOf()
