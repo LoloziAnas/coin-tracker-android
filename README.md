@@ -1,2 +1,2 @@
-crypto tracker
+Crypto Tracker
 =================
