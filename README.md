@@ -5,7 +5,8 @@ Most of us can relate to kicking back on the couch and enjoying
 a movie with friends and family. In this project, we’ll design and implement an android application
 to allow us to find the most popular movies playing.
 
-This app uses the API from [coinpaprika.com](https://api.coinpaprika.com/)
+This app uses the API from [coinpaprika.com](https://api.coinpaprika.com/).
+
 Coinpaprika API delivers free & frequently updated market data from the world of crypto: coin prices, 
 volumes, market caps, ATHs, return rates and more.
 
