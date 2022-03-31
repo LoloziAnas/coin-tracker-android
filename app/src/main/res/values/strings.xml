@@ -5,6 +5,7 @@
     <string name="coins_fragment_label">Coins</string>
     <string name="coins_detail_fragment_label">Coin Detail</string>
     <string name="coins_symbol">(%s)</string>
+    <string name="title">%s (%s)</string>
     <string name="tag_label">Tag</string>
     <string name="team_members">Team Members</string>
 </resources>

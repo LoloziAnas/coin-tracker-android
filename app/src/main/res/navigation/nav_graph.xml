@@ -13,8 +13,8 @@
             android:id="@+id/action_coinFragment_to_coinDetailFragment"
             app:destination="@id/coinDetailFragment" />
         <argument
-            android:name="coinId"
-            app:argType="string" />
+            android:name="coin"
+            app:argType="com.lolozianas.cryptotracker.network.Coin" />
     </fragment>
     <fragment
         android:id="@+id/coinDetailFragment"

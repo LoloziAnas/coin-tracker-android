@@ -43,7 +43,7 @@ class CoinFragment : Fragment() {
 
             // Sets the adapter of Overview RecyclerView
             recyclerViewCoins.adapter = CoinListAdapter(CoinListener { coin ->
-                val bundle = bundleOf("coinId" to coin.id)
+                val bundle = bundleOf("coin" to coin)
                 findNavController().navigate(R.id.action_coinFragment_to_coinDetailFragment, bundle)
             })
 
