@@ -11,9 +11,9 @@ Coinpaprika API delivers free & frequently updated market data from the world of
 volumes, market caps, ATHs, return rates and more.
 
 ## What I learned
-- Fetch data from the Internet with Coinpaprika API
-- Use adapters and custom list layouts to populate list views
-- Incorporate libraries to simplify the amount of code you need to write
+- Fetch data from the Internet with Coinpaprika API.
+- Use adapters and custom list layouts to populate list views.
+- Incorporate libraries to simplify the amount of code you need to write.
 - Build a fully featured application that looks and feels natural on the latest Android operating system.
 
 ## Libraries
